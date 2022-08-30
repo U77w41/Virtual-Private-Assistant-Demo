@@ -9,10 +9,9 @@ engine.setProperty('rate',170) # speech rate 200 as a normal speed
 # Creating a function to speak a given text
 
 def Say(TEXT):
-    print('             ')
     print(f'A.I. : {TEXT}')
     engine.say(text = TEXT)
     engine.runAndWait()
     print("             ")
 
-Say('Greetings')
+Say('  Greetings')

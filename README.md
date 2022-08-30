@@ -6,3 +6,5 @@
 ```bash
 pip install -r requirements.txt
 ```
+### 4. creating the speak.py file
+### 5. 
