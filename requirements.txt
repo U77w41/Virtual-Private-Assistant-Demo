@@ -1,3 +1,6 @@
 pyttsx3
 numpy
 pandas
+os
+sklearn
+nltk
