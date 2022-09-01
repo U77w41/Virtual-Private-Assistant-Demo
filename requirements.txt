@@ -10,3 +10,4 @@ json
 psutil
 pyjokes
 tesseract
+PyAudio

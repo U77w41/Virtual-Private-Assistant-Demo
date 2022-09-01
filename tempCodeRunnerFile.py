@@ -1,17 +1,23 @@
-# Importing Necessary files
-import pyttsx3
+import speech_recognition as sr
 
-engine = pyttsx3.init("sapi5")  # The speech engine sapi5 created my microsoft
-voices = engine.getProperty('voices') # storing the voices inside a variable
-engine.setProperty('voices',voices[0].id) # setting the voice id 0 ,1 ,2 .....
-engine.setProperty('rate',170) # speech rate 200 as a normal speed
+def Listen():
+    r = sr.Recognizer()
 
-# Creating a function to speak a given text
+    with sr.Microphone() as source:
+        print('Listening....')
+        r.pause_threshold =1
+        audio = r.listen(source, 0,2)
+    try:
+        print("Recognizing.....")
+        query = r.recognize_google(audio ,language = 'en-in')
+        print(f'You said : {query}')
+    except:
+        return ""
+    
+    query = str(query)
+    return query.lower()
 
-def Say(TEXT):
-    print(f'A.I. : {TEXT}')
-    engine.say(text = TEXT)
-    engine.runAndWait()
-    print("             ")
 
-Say('  Greetings')
+
+
+Listen()
