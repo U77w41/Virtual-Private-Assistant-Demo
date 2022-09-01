@@ -11,3 +11,4 @@ psutil
 pyjokes
 tesseract
 PyAudio
+torch
