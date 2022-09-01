@@ -4,3 +4,9 @@ pandas
 os
 sklearn
 nltk
+SpeechRecognition
+webbrowser
+json
+psutil
+pyjokes
+tesseract
